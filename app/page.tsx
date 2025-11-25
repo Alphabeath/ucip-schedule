@@ -19,9 +19,6 @@ import {
   Calendar,
   Clock,
   Users,
-  Shield,
-  Zap,
-  CheckCircle,
   ArrowRight,
   Star,
 } from "lucide-react";
@@ -42,12 +39,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image
-              src="/ucip-sinfondo.png"
-              alt="UCEN Logo"
-              width={100}
-              height={100}
-            />
+            <Image src="/ucip.png" alt="UCEN Logo" width={100} height={100} />
           </div>
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList>
@@ -72,7 +64,7 @@ export default function Home() {
           <div className="flex items-center gap-2 sm:gap-4">
             <Button
               size="sm"
-              className="text-xs sm:text-sm"
+              className="text-xs sm:text-sm bg-secondary hover:bg-secondary/70 cursor-pointer"
               data-cal-namespace="30min"
               data-cal-link="bryan-reyes-avila/30min"
               data-cal-config='{"layout":"month_view"}'
@@ -89,10 +81,10 @@ export default function Home() {
           🎉 Nueva versión disponible
         </Badge> */}
         <h1 className="mb-4 text-3xl font-extrabold tracking-tight sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl">
-          Unidad de consultoría e intervención psicológica
+          UNIDAD DE CONSULTORÍA E INTERVENCIÓN PSICOLÓGICA
           <br />
           <br />
-          <span className="text-primary">Universidad Central</span>
+          <p className="text-primary text-2xl">UNIVERSIDAD CENTRAL</p>
         </h1>
         <p className="mx-auto mb-6 max-w-2xl px-4 text-base text-muted-foreground sm:mb-8 sm:text-lg">
           UCIP es un área de la Universidad Central, sede Región de Coquimbo,
@@ -102,7 +94,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center gap-3 px-4 sm:flex-row sm:gap-4">
           <Button
             size="lg"
-            className="w-full gap-2 sm:w-auto"
+            className="w-full gap-2 sm:w-auto bg-secondary hover:bg-secondary/70 cursor-pointer"
             data-cal-namespace="30min"
             data-cal-link="bryan-reyes-avila/30min"
             data-cal-config='{"layout":"month_view"}'
@@ -111,20 +103,6 @@ export default function Home() {
             <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
-        <div className="mt-8 flex flex-col items-center justify-center gap-3 text-sm text-muted-foreground sm:mt-12 sm:flex-row sm:gap-6 md:gap-8">
-          <div className="flex items-center gap-2">
-            <CheckCircle className="h-4 w-4 shrink-0 text-green-500" />
-            <span>Sin tarjeta de crédito</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="h-4 w-4 shrink-0 text-green-500" />
-            <span>14 días gratis</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="h-4 w-4 shrink-0 text-green-500" />
-            <span>Cancela cuando quieras</span>
-          </div>
-        </div>
       </section>
 
       <Separator />
@@ -132,13 +110,13 @@ export default function Home() {
       {/* Services Section */}
       <section id="services" className="container py-12 sm:py-16 md:py-24">
         <div className="mb-8 text-center sm:mb-12">
-          <Badge className="mb-4">Servicios</Badge>
+          <Badge className="mb-4 bg-secondary">Servicios</Badge>
           <h2 className="mb-4 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
-            Todo lo que necesitas para gestionar horarios
+            Nuestros servicios para organizaciones y bienestar emocional
           </h2>
           <p className="mx-auto max-w-2xl px-4 text-sm text-muted-foreground sm:text-base">
-            Herramientas potentes diseñadas para simplificar la planificación y
-            aumentar la eficiencia de tu equipo.
+            Acompañamos a personas y organizaciones en su desarrollo, bienestar
+            y crecimiento
           </p>
         </div>
         <div className="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -149,8 +127,8 @@ export default function Home() {
               </div>
               <CardTitle>Consultoría organizacional</CardTitle>
               <CardDescription>
-                Vista de calendario drag-and-drop para asignar turnos
-                fácilmente.
+                Diagnóstico de clima laboral, gestión de equipos y comunicación
+                interna.
               </CardDescription>
             </CardHeader>
           </Card>
@@ -334,7 +312,7 @@ export default function Home() {
       {/* Testimonials Section */}
       <section id="testimonials" className="container py-12 sm:py-16 md:py-24">
         <div className="mb-8 text-center sm:mb-12">
-          <Badge className="mb-4">Testimonios</Badge>
+          <Badge className="mb-4 bg-secondary">Testimonios</Badge>
           <h2 className="mb-4 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
             Lo que dicen nuestros clientes
           </h2>
@@ -351,9 +329,9 @@ export default function Home() {
                 ))}
               </div>
               <p className="mb-4 text-muted-foreground">
-                &ldquo;UCIP Schedule ha transformado la forma en que gestionamos
-                los turnos de nuestro hospital. Ahorramos horas cada
-                semana.&rdquo;
+                &ldquo;Gracias al acompañamiento de UCIP logramos fortalecer la
+                comunicación interna y reducir conflictos en nuestro
+                equipo.&rdquo;
               </p>
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
@@ -379,8 +357,8 @@ export default function Home() {
                 ))}
               </div>
               <p className="mb-4 text-muted-foreground">
-                &ldquo;La automatización de horarios nos ha permitido enfocarnos
-                en lo que realmente importa: nuestros pacientes.&rdquo;
+                &ldquo;Los talleres de habilidades blandas nos ayudaron a
+                mejorar el liderazgo y la motivación en la organización.&rdquo;
               </p>
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
@@ -406,8 +384,9 @@ export default function Home() {
                 ))}
               </div>
               <p className="mb-4 text-muted-foreground">
-                &ldquo;Excelente soporte y una interfaz muy intuitiva. Lo
-                recomiendo a cualquier organización de salud.&rdquo;
+                &ldquo;El apoyo emocional brindado por UCIP fue fundamental para
+                acompañar a nuestros trabajadores durante un proceso de
+                reestructuración.&rdquo;
               </p>
               <div className="flex items-center gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10">
@@ -430,7 +409,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="container py-12 text-center sm:py-16 md:py-24">
         <h2 className="mb-4 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
-          ¿Necesitas apoyo psicológico u organizacional?
+          ¿Buscas fortalecer tu organización o cuidar tu bienestar emocional?
         </h2>
         <p className="mx-auto mb-6 max-w-2xl px-4 text-sm text-muted-foreground sm:mb-8 sm:text-base">
           En UCIP estamos comprometidos con tu bienestar. Agenda una consulta
@@ -440,7 +419,7 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center gap-3 px-4 sm:flex-row sm:gap-4">
           <Button
             size="lg"
-            className="w-full gap-2 sm:w-auto"
+            className="w-full gap-2 sm:w-auto bg-secondary hover:bg-secondary/70 cursor-pointer"
             data-cal-namespace="30min"
             data-cal-link="bryan-reyes-avila/30min"
             data-cal-config='{"layout":"month_view"}'
@@ -461,7 +440,7 @@ export default function Home() {
             <div>
               <div className="mb-4 flex items-center gap-2">
                 <Image
-                  src="/ucip.jpeg"
+                  src="/ucip.png"
                   alt="UCEN Logo"
                   width={100}
                   height={100}
